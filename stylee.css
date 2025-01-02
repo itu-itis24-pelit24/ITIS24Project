@@ -1,0 +1,50 @@
+#title{
+    background-color: #C99962;
+    font-size: 3em;           
+}
+#me{
+    display: inline-block; padding: 10px 20px; background-color: #0ecee0; color: white; text-decoration: none; border-radius: 5px;
+   
+}
+#game{
+    display: inline-block; padding: 10px 20px; background-color:#0ecee0 ; color: white; text-decoration: none; border-radius: 5px;
+}
+#title1{
+    margin-left: 100px;
+    margin-top: 150px;
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+#title2{
+    margin-left: 70 px;
+    margin-top: 200px;
+    font-size: 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+#interests{
+    
+    width: fit-content; display: inline-block; margin: 0; padding: 10px;border-radius: 30px;
+   
+    background-color: #c1e0de;
+    color: #2c3e50;
+    font-weight: lighter;
+}
+#info{ width: fit-content; display: inline-block; margin: 0; padding: 10px;border-radius: 30px;
+   
+   background-color: #c1e0de;
+   color: #2c3e50;
+   font-weight: lighter;
+
+}
+#title3{
+    margin-left: 70 px;
+    margin-top: 200px;
+    font-size: 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+body{
+    background-image: linear-gradient(#f4f4f4,lightblue)
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Text Game</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+    
+     button {
+        margin: 10px 0;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 1em;
+    }
+    #user-input {
+        text-align: center;
+        margin: 10px 0;
+        padding: 10px;
+        width: 50%;
+        box-sizing: border-box;
+        font-size: 1em;
+    }
+    
+    
+    #lives {
+        font-weight: bold;
+        color: red;
+    }
+    
+    
+    </style>
+    
+</head>
+<body>
+    <div>
+        <h1>Word Prediction Game</h1>
+    <div style="background-color: white;"><img src="p.svg" alt="" style="width: 100px;height: 100px;"> <img src="r.svg" alt="" style="width: 100px;height: 100px;" > <img src="I.svg" alt="" style="width: 100px;height: 100px;"> <img src="s.svg" alt="" style="width: 100px;height: 100px;"> <img src="m.svg" alt="" style="width: 100px;height: 100px;"></div>
+        
+        <p id="challenge-text">Predict The Word:</p>
+
+
+        <input type="text" id="user-input" placeholder="Prediction">
+        <p>Lives Left: <img id="3" src="diamond.png" style="width: 30px; height: 30px;"> <img id="2" src="diamond.png" style="width: 30px; height: 30px;"> <img id="1" src="diamond.png" style="width: 30px; height: 30px;" </p>
+        <div id="Score">Score: 0</div> 
+        <button id="submit-btn">Submit</button>
+        <p id="message"></p>
+        <button >Restart</button>
+    </div>
+    <script src="script.js"></script>
+
+</html>
