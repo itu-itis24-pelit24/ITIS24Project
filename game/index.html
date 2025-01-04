@@ -48,7 +48,7 @@
 <body>
     <div>
         <h1>Word Prediction Game</h1>
-    <div id="words" style="background-color: white;"><img id="word1hider"  style="background-color: black;width: 90px;height: 95px;margin-right: 10px;"><img class="hidden"  id="word1" src="p.svg" alt="" style="width: 100px;height: 100px ;"> <img id="word2hider" style="background-color: black;width: 90px;height: 95px;margin-right: 10px;"> <img  class="hidden"  id="word2" src="r.svg" alt="" style="width: 100px;height: 100px;" > <img id="word3hider" style="background-color: black;width: 90px;height: 95px;margin-right: 10px;"> <img class="hidden" id="word3" src="I.svg" alt="" style="width: 100px;height: 100px;"> <img id="word4hider" style="background-color: black;width: 90px;height: 95px;margin-right: 10px;"> <img class="hidden" id="word4"  src="s.svg" alt="" style="width: 100px;height: 100px;"> <img id="word5hider" style="background-color: black;width: 90px;height: 95px;margin-right: 10px;"> <img class="hidden" id="word5" src="m.svg" alt="" style="width: 100px;height: 100px;">      </div> 
+    <div id="words" style="background-color: white;"><img  id="word1hider"  style="background-color: black;width: 90px;height: 95px;margin-right: 10px;"><img class="hidden"  id="word1" src="p.svg" alt="" style="width: 100px;height: 100px ;"> <img id="word2hider" style="background-color: black;width: 90px;height: 95px;margin-right: 10px;"> <img  class="hidden"  id="word2" src="r.svg" alt="" style="width: 100px;height: 100px;" > <img  id="word3hider" style="background-color: black;width: 90px;height: 95px;margin-right: 10px;"> <img class="hidden" id="word3" src="I.svg" alt="" style="width: 100px;height: 100px;"> <img  id="word4hider" style="background-color: black;width: 90px;height: 95px;margin-right: 10px;"> <img class="hidden" id="word4"  src="s.svg" alt="" style="width: 100px;height: 100px;"> <img  id="word5hider" style="background-color: black;width: 90px;height: 95px;margin-right: 10px;"> <img class="hidden" id="word5" src="m.svg" alt="" style="width: 100px;height: 100px;">      </div> 
         
         <p id="challenge-text">Predict The Word:</p>
 
@@ -60,124 +60,8 @@
         <p id="message"></p>
         <button id="restart-btn" >Reset the Game</button>
     </div>
-    <script >
-        const word1 = document.getElementById("word1")
-        const word2 = document.getElementById("word2")
-        const word3 = document.getElementById("word3")
-        const word4 = document.getElementById("word4")
-        const word5 = document.getElementById("word5")
-        const word1hider = document.getElementById("word1hider")
-        const word2hider = document.getElementById("word2hider")
-        const word3hider = document.getElementById("word3hider")
-        const word4hider = document.getElementById("word4hider")
-        const word5hider = document.getElementById("word5hider")
-        const userinput = document.getElementById("user-input")
-        const submitbtn = document.getElementById("submit-btn")
-        let Scoreelement = document.getElementById("Score")
-        const restartbtn = document.getElementById("restart-btn")
-        const heart1 = document.getElementById("1")
-        const heart2 = document.getElementById("2")
-        const heart3 = document.getElementById("3")
-        const message = document.getElementById("message")
-        let challengeWord = "PRISM"
-        let Score=0
-        let Lives=3
-        let guesses =[]
-        function startGame(){
-            Lives=3
-            userinput.value = ""
-            message.textContent=""
-            Score === 0
-            heart3.style.visibility = "visible"
-            heart2.style.visibility = "visible"
-            heart1.style.visibility = "visible"
-
-            
-        }
-        function eventChecker(){
-            
-            const correctPredictionP="p"
-            let wordPrediction = userinput.value.toLowerCase();
-            const correctPredictionI ="i"
-            const correctPredictionR = "r"
-            const correctPredictionS= "s"
-            const correctPredictionM = "m"
-            if(guesses.includes(wordPrediction)){
-                message.textContent = "You already guessed this letter!"
-                userinput.value = ""
-                return
-            }
-            else if( wordPrediction === correctPredictionP ){
-             Score= Score += 20
-             word1.classList.remove("hidden")
-             word1hider.classList.add("hidden")
-             guesses.push("p")
-             userinput.value = ""
-            }
-            else if (wordPrediction === correctPredictionR){
-                Score = Score += 20
-                word2.classList.remove("hidden")
-                word2hider.classList.add("hidden")
-                guesses.push("r")
-                userinput.value = ""
-            }
-            else if (wordPrediction === correctPredictionI){
-                Score = Score += 20
-                word3.classList.remove("hidden")
-                word3hider.classList.add("hidden")
-                guesses.push("i")
-                userinput.value = ""
-            }
-            else if (wordPrediction === correctPredictionS){
-                Score = Score+=20
-                word4.classList.remove("hidden")
-                word4hider.classList.add("hidden")
-                guesses.push("s")
-                userinput.value = ""
-            }
-            else if(wordPrediction=== correctPredictionM){
-                Score = Score +=20
-                word5.classList.remove("hidden")
-                word5hider.classList.add("hidden")
-                guesses.push("m")
-                userinput.value = ""
-            }
-            else if (wordPrediction=="prism"){
-                Score = 100
-                guesses.push("prism")
-                word1.classList.remove("hidden")
-                word2.classList.remove("hidden")
-                word3.classList.remove("hidden")
-                word4.classList.remove("hidden")
-                word5.classList.remove("hidden")
-                word1hider.classList.add("hidden")
-                word2hider.classList.add("hidden")
-                word3hider.classList.add("hidden")
-                word4hider.classList.add("hidden")
-                word5hider.classList.add("hidden")
-            }
-            else {
-                Lives --
-                message.textContent="Wrong guess,try again."
-                if (Lives === 2) heart3.style.visibility = "hidden";
-        if (Lives === 1) heart2.style.visibility = "hidden";
-        if (Lives === 0) {
-            heart1.style.visibility = "hidden";
-           alert("You lost the game!");}
-            }
-            Scoreelement.textContent=Score
-            
-            
-        }
-        submitbtn.addEventListener("click", eventChecker)
-        restartbtn.addEventListener("click", startGame)
-        if (Score === 100){
-            alert("You won the game!")
-            startGame();
-        }
-        
-        startGame();
-        
+    <script src="script.js" >
+              
     </script>
     
 
